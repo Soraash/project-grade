@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<form th:action="@{/getStudent}" method="post">
+  <label>ID : <input type="text" name="id"></label><br>
+  <button type="submit">Get Student</button>
+</form>
+
+<a href="/all">Get All student</a>
+</body>
+</html>
