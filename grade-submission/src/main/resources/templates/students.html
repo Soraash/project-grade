@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h2>Students</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}">Student ID</td>
+        <td th:text="${student.name}">Student Name</td>
+        <td>
+            <a th:href="@{/student/{id}/courses(id=${student.id})}">View Courses</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

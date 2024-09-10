@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h2>Admin Dashboard</h2>
+<ul>
+    <li><a th:href="@{/course/all}">Manage Courses</a></li>
+    <li><a th:href="@{/grade/all}">Manage Grades</a></li>
+    <li><a th:href="@{/student/all}">Manage Students</a></li>
+</ul>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
